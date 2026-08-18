@@ -1,0 +1,8 @@
+services:
+  inspection-control:
+    build: .
+    environment:
+      PORT: 11500
+    ports:
+      - "11500:11500"
+

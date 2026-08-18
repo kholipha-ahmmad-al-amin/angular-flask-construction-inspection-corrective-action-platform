@@ -1,0 +1,5 @@
+CREATE TABLE inspections (id VARCHAR(80) PRIMARY KEY, site_name VARCHAR(180) NOT NULL, location VARCHAR(300) NOT NULL, inspection_type VARCHAR(100) NOT NULL, status VARCHAR(40) NOT NULL, opened_at TIMESTAMP NOT NULL);
+CREATE TABLE findings (id VARCHAR(80) PRIMARY KEY, inspection_id VARCHAR(80) NOT NULL, title VARCHAR(180) NOT NULL, severity VARCHAR(40) NOT NULL, observation VARCHAR(600) NOT NULL, status VARCHAR(40) NOT NULL, recorded_by VARCHAR(140) NOT NULL, recorded_at TIMESTAMP NOT NULL);
+CREATE TABLE corrective_actions (id VARCHAR(80) PRIMARY KEY, finding_id VARCHAR(80) NOT NULL, owner_team VARCHAR(180) NOT NULL, due_date TIMESTAMP NOT NULL, status VARCHAR(40) NOT NULL, completion_evidence VARCHAR(500), verified_by VARCHAR(140), verified_at TIMESTAMP);
+CREATE TABLE inspection_audit_events (id VARCHAR(80) PRIMARY KEY, inspection_id VARCHAR(80) NOT NULL, actor_name VARCHAR(140) NOT NULL, actor_role VARCHAR(80) NOT NULL, action VARCHAR(100) NOT NULL, detail VARCHAR(600) NOT NULL, created_at TIMESTAMP NOT NULL);
+
