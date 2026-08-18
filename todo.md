@@ -5,4 +5,4 @@
 - [x] Add success, validation, authorization, conflict, and missing-record test coverage.
 - [x] Add Docker, CI, SQL migration, and required README documentation.
 - [x] Verify browser workflow.
-- [ ] Verify public repository visibility, default branch, and portfolio ledger entry.
+- [x] Verify public repository visibility, default branch, and portfolio ledger entry.
